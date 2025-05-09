@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método Completo para Criar Fanarts Profissionais</title>
+    <style>
+        /* Reset e Estilos Gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header */
+        header {
+            background-color: #2c3e50;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            text-align: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        /* Video Container */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 800px;
+            margin: 30px auto;
+            background: #000;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 0 #c0392b;
+        }
+        
+        .cta-button:hover {
+            background-color: #c0392b;
+            transform: translateY(2px);
+            box-shadow: 0 2px 0 #c0392b;
+        }
+        
+        /* Benefits Section */
+        .benefits {
+            padding: 60px 0;
+            background-color: white;
+        }
+        
+        .benefits h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .benefit-item {
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .benefit-item img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 15px;
+        }
+        
+        .benefit-item h3 {
+            margin-bottom: 10px;
+            color: #e74c3c;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 60px 0;
+            background-color: #f1f5f9;
+        }
+        
+        .testimonials h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        
+        .testimonial-item {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .testimonial-item .quote {
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        
+        .testimonial-item .author {
+            font-weight: bold;
+            color: #e74c3c;
+        }
+        
+        /* Offer Section */
+        .offer {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white;
+            text-align: center;
+        }
+        
+        .offer h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .price {
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        
+        .original-price {
+            text-decoration: line-through;
+            opacity: 0.7;
+            font-size: 1.5rem;
+        }
+        
+        .bonuses {
+            margin: 40px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+        
+        .bonuses h3 {
+            margin-bottom: 20px;
+        }
+        
+        .bonuses ul {
+            list-style-position: inside;
+        }
+        
+        .bonuses li {
+            margin-bottom: 10px;
+        }
+        
+        /* Guarantee */
+        .guarantee {
+            padding: 40px 0;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+        
+        .guarantee img {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+        
+        /* FAQ */
+        .faq {
+            padding: 60px 0;
+            background-color: white;
+        }
+        
+        .faq h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .faq-question {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #e74c3c;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        footer p {
+            margin-bottom: 10px;
+        }
+        
+        .disclaimer {
+            font-size: 0.8rem;
+            opacity: 0.7;
+            margin-top: 20px;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">Método Fanart Pro</div>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Aprenda a Criar Fanarts Incríveis em Apenas 8 Semanas</h1>
+            <p>O método completo para quem quer dominar a arte digital e criar fanarts profissionais, mesmo começando do zero!</p>
+            
+            <div class="video-container">
+                <!-- Substitua pelo seu vídeo -->
+                <iframe src="https://www.youtube.com/embed/SEU_VIDEO" frameborder="0" allowfullscreen></iframe>
+            </div>
+            
+            <a href="#offer" class="cta-button">QUERO ME INSCREVER AGORA!</a>
+        </div>
+    </section>
+    
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <h2>O que você vai aprender no Método Fanart Pro</h2>
+            
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <img src="https://via.placeholder.com/80" alt="Ícone">
+                    <h3>Fundamentos do Desenho</h3>
+                    <p>Domine as bases do desenho para criar personagens com proporções perfeitas.</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <img src="https://via.placeholder.com/80" alt="Ícone">
+                    <h3>Técnicas Digitais</h3>
+                    <p>Aprenda a usar ferramentas profissionais como Photoshop e Procreate.</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <img src="https://via.placeholder.com/80" alt="Ícone">
+                    <h3>Estilo Próprio</h3>
+                    <p>Desenvolva seu estilo artístico único e reconhecível.</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <img src="https://via.placeholder.com/80" alt="Ícone">
+                    <h3>Teoria das Cores</h3>
+                    <p>Combine cores como um profissional e dê vida aos seus desenhos.</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <img src="https://via.placeholder.com/80" alt="Ícone">
+                    <h3>Anatomia Artística</h3>
+                    <p>Desenhe corpos e rostos com precisão e dinamismo.</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <img src="https://via.placeholder.com/80" alt="Ícone">
+                    <h3>Renderização</h3>
+                    <p>Técnicas avançadas de sombreamento e texturização.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>O que nossos alunos dizem</h2>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-item">
+                    <div class="quote">"O Método Fanart Pro mudou completamente minha abordagem ao desenho digital. Em 3 meses já estava fazendo comissões!"</div>
+                    <div class="author">- Ana C., 22 anos</div>
+                </div>
+                
+                <div class="testimonial-item">
+                    <div class="quote">"Nunca imaginei que poderia aprender tanto em tão pouco tempo. As aulas são super didáticas e práticas."</div>
+                    <div class="author">- Rafael M., 19 anos</div>
+                </div>
+                
+                <div class="testimonial-item">
+                    <div class="quote">"Finalmente consegui desenvolver meu estilo próprio graças ao método. Recomendo para todos que querem levar a arte a sério."</div>
+                    <div class="author">- Juliana S., 25 anos</div>
+                </div>
+                
+                <div class="testimonial-item">
+                    <div class="quote">"Valeu cada centavo! Em 2 meses já recuperei o investimento com minhas primeiras comissões pagas."</div>
+                    <div class="author">- Carlos E., 27 anos</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Offer Section -->
+    <section class="offer" id="offer">
+        <div class="container">
+            <h2>OFERTA ESPECIAL POR TEMPO LIMITADO</h2>
+            <p>Inscreva-se hoje e garanta todos esses benefícios:</p>
+            
+            <div class="price">R$ 497,00</div>
+            <div class="original-price">De R$ 997,00</div>
+            
+            <a href="#" class="cta-button">QUERO GARANTIR MEU ACESSO!</a>
+            
+            <div class="bonuses">
+                <h3>Bônus Exclusivos para quem se inscrever hoje:</h3>
+                <ul>
+                    <li>Módulo Bônus: Como Monetizar Seu Talentos (R$ 197,00)</li>
+                    <li>Coleção de Pincéis Profissionais (R$ 97,00)</li>
+                    <li>Grupo Exclusivo no Discord (R$ 67,00)</li>
+                    <li>Feedback Semanal dos Professores (R$ 297,00)</li>
+                </ul>
+                
+                <p>Total em bônus: <strong>R$ 658,00</strong></p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Guarantee -->
+    <section class="guarantee">
+        <div class="container">
+            <img src="https://via.placeholder.com/100" alt="Selo de Garantia">
+            <h3>Garantia Incondicional de 7 Dias</h3>
+            <p>Se em 7 dias você achar que o método não é para você, devolvemos seu dinheiro sem burocracia.</p>
+        </div>
+    </section>
+    
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2>Perguntas Frequentes</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">Preciso saber desenhar para participar?</div>
+                <p>Não! O método foi desenvolvido para ensinar desde o básico absoluto até técnicas avançadas.</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Quanto tempo preciso dedicar por semana?</div>
+                <p>Recomendamos pelo menos 4-5 horas semanais para ver resultados consistentes.</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Por quanto tempo terei acesso ao conteúdo?</div>
+                <p>O acesso é vitalício! Você pode estudar no seu ritmo e revisitar as aulas quando quiser.</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Preciso de algum equipamento específico?</div>
+                <p>Um tablet gráfico básico já é suficiente para começar. Temos módulos específicos para diferentes ferramentas.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Final CTA -->
+    <section class="offer">
+        <div class="container">
+            <h2>Não perca essa oportunidade!</h2>
+            <p>Essa oferta especial está disponível apenas por tempo limitado.</p>
+            
+            <div class="price">R$ 497,00</div>
+            <div class="original-price">De R$ 997,00</div>
+            
+            <a href="#" class="cta-button">QUERO COMEÇAR AGORA MESMO!</a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Método Fanart Pro - Todos os direitos reservados © 2023</p>
+            <p>contato@metodofanartpro.com.br</p>
+            
+            <div class="disclaimer">
+                <p>Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook.</p>
+                <p>Os resultados podem variar de pessoa para pessoa.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
