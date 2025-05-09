@@ -1,2 +1,2 @@
-# fernandosulucoes.github.io
+# metodofanart.github.io
 Landing page para o Método Fanart Pro
